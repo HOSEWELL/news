@@ -11,7 +11,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.hamburger-menu {
+.icon{
     display: none;
 }
 .navbar a{
@@ -31,34 +31,198 @@ body{
 .navcolumn{
     list-style: none;
     display: flex;
+    font-size: large;
     column-gap: 20px;
+    justify-content: space-between;
+}
+.hambergermenu{
+    display: none;
+}
+.homepage{
+    padding: 2px;
+}
+.newspage{
+    display: flex;
+    display: 50% 50%;
+    justify-content: space-between;
+    column-gap: 60px;
+}
+.newspage div span img{
+    height: 25em;
+    border-radius: 30px;
+    
+}
+.newscontent{
+    font-size: larger;
+    font-weight: 600;
+}
+.newscontent h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    
+}
+.time{
+    color: brown;
+}
+.heading{
+    font-size: large;
+    font-weight: 800;
+    justify-content: space-between;
+    display: flex;
+}
+.heading span{
+    font-size: xx-large;
+    font-weight: 800;
+}
+.heading button{
+    border: none;
+    color: red;
+    background-color: white;
+    font-size: larger;
+    font-style: oblique;
+}
+
+ /* divtwopictures */
+#latest-news{
+    display: flex;
+    justify-content: space-between;
+}
+#latest-news .newspage div img{
+    height: 20em;
+    width: 25em;
+    padding: 15px;
+    border-radius: 30px;
+    justify-content: space-between;
+}
+#latest-news .newspage{
+    display: grid;
+    padding: 20px;
+}
+
+#mustread{
+    display: flex;
+    padding: 20px;
+}
+#mustread img{
+    height: 20em;
+    width: 28em;
+    border-radius: 20px;
+}
+#mustread .columntwo{
+    display: grid;
+}
+#recomendation{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+#recomendation img{
+    width: 38em;
+    border-radius: 20px;
+}
+
+
+
+.endcontent{
+    background-color: rgb(247, 248, 248);
+}
+.footer{
+    display: flex;
+    column-gap: 8em;
+}
+.footerfills{
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 5px;
+}
+.footerfills input{
+    padding: 10px;
+    border-radius: 20px;
+    width: 25em;
+}
+.footerfills button{
+    background-color: black;
+    color: white;
+    border-radius: 20px; 
+    padding: 10px;
+    
+}
+.footerlist{
+    display: flex;
+    font-size: x-large;
+    column-gap:3em;
+    list-style: none;
+   
+}
+.copyrights{
+    padding: 20px;
+    display: flex;
+    font-size: large;
+    font-weight: 300;
     justify-content: space-between;
 }
 
 
+
 @media screen and (max-width: 450px) {
-    .navlink {
+    .navlink{
         display: none;
     }
-   .navbar{
-    font-size: larger;
-    font-style: normal;
-   }
-    .hamburger-menu {
-        display: flex;
-        align-items: center;
+    .navbar div span{
+        display: none;
     }
-
-    .hamburger-menu i {
-        font-size: 28px;
-        color: bisque;
+    .navlink.open {
+        display: grid;
     }
+    .hambergermenu{
+        display: block;
+        gap: var(--hambergermenu-gap);
+        flex-direction: column;
+        position: absolute;
+        width: max-content;
+        cursor: pointer;
+        left: 5px;
+        top: 20px;
+        z-index: 5;
+        
+    }
+    .star {
+        font-size: 24px; 
+        color: blue;
+  } 
+  .newspage{
+    display: grid;
+    justify-content: space-between;
+    column-gap: 5px;
+    
 }
+.newspage div span img{
+    height: 12em;
+    border-radius: 30px;
 
-
-
-
-
-
-
-
+}
+#latest-news{
+    display: grid;
+    justify-content: space-between;
+}
+.footer{
+    display: grid;
+    justify-content: space-between;
+}
+.footerlist{
+    display: grid;
+}
+.copyrights{
+    display: grid;
+}
+.footerfills input{
+    justify-content: space-between;
+    width: 20em;
+}
+#mustread{
+    display: grid;
+}
+#recomendation{
+    display: grid;
+}
+}
