@@ -85,6 +85,10 @@ function displayNews(news) {
 latestNews.appendChild(newsItem)
   });
 
+
+
+
+  
   news.slice(6,10).forEach(article => {
     const newsItem = document.createElement("div");
     newsItem.setAttribute('class','mustread')
@@ -103,7 +107,16 @@ latestNews.appendChild(newsItem)
      ` 
 mustread.appendChild(newsItem)
   });
-  
+
+
+
+
+
+
+
+
+
+
   news.slice(4,7).forEach(article => {
     const newsItem = document.createElement("div");
     newsItem.setAttribute('class','recomendation')
