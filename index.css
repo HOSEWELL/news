@@ -86,6 +86,7 @@ body{
 #latest-news{
     display: flex;
     justify-content: space-between;
+    overflow-x: scroll;
 }
 #latest-news .newspage div img{
     height: 20em;
@@ -98,10 +99,16 @@ body{
     display: grid;
     padding: 20px;
 }
+#bell:hover{
+    transform: scale(2);
+    color: red;
+}
 
 #mustread{
     display: flex;
     padding: 20px;
+    overflow-x: scroll;
+    
 }
 #mustread img{
     height: 20em;
@@ -115,6 +122,7 @@ body{
     display: flex;
     padding: 10px;
     justify-content: space-between;
+    overflow-x: scroll;
 }
 #recomendation img{
     width: 38em;
@@ -137,14 +145,15 @@ body{
 }
 .footerfills input{
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 25em;
 }
 .footerfills button{
     background-color: black;
     color: white;
-    border-radius: 20px; 
-    padding: 10px;
+    border: none;
+    border-radius: 10px; 
+    padding: 12px;
     
 }
 .footerlist{
@@ -191,6 +200,10 @@ body{
         font-size: 24px; 
         color: blue;
   } 
+  #bell:hover{
+    transform: scale(2);
+    color: red;
+}
   .newspage{
     display: grid;
     justify-content: space-between;

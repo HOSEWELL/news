@@ -18,7 +18,7 @@ function toggleNav() {
 // Fetch news using an API
 
 function searchNews() {
-  const breakingnews = ` https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=1dda103097594899ab06482c72992bb3`;
+  const breakingnews = `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=1dda103097594899ab06482c72992bb3`;
 
   fetch(breakingnews)
     .then(response => response.json())
@@ -84,7 +84,6 @@ function displayNews(news) {
 
 latestNews.appendChild(newsItem)
   });
-
 
 
 
