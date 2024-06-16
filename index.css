@@ -88,6 +88,9 @@ body{
     justify-content: space-between;
     overflow-x: scroll;
 }
+#latest-news::-webkit-scrollbar{
+    width: 0;
+}
 #latest-news .newspage div img{
     height: 20em;
     width: 25em;
@@ -107,13 +110,16 @@ body{
 #mustread{
     display: flex;
     padding: 20px;
-    overflow-x: scroll;
-    
+    overflow-x: scroll; 
+}
+#mustread::-webkit-scrollbar{
+    width: 0;
 }
 #mustread img{
     height: 20em;
     width: 28em;
     border-radius: 20px;
+    padding: 10px;
 }
 #mustread .columntwo{
     display: grid;
@@ -123,6 +129,9 @@ body{
     padding: 10px;
     justify-content: space-between;
     overflow-x: scroll;
+}
+#recomendation::-webkit-scrollbar{
+    width: 0;
 }
 #recomendation img{
     width: 38em;
@@ -218,6 +227,12 @@ body{
 #latest-news{
     display: grid;
     justify-content: space-between;
+    padding: 0px 0px;
+}
+#latest-news div span img{
+    height: 12em;
+    border-radius: 30px;
+
 }
 .footer{
     display: grid;

@@ -43,7 +43,7 @@ function toggleNav() {
     newsList.innerHTML = '';
   
   
-    news.slice(0,1).forEach(article => {
+    news.slice(1,2).forEach(article => {
       const listItem = document.createElement("li");
       listItem.innerHTML = `
       <div class= "newspage">
@@ -84,11 +84,6 @@ function toggleNav() {
   
   latestNews.appendChild(newsItem)
     });
-  
-  
-  
-  
-    
     news.slice(6,10).forEach(article => {
       const newsItem = document.createElement("div");
       newsItem.setAttribute('class','mustread')
