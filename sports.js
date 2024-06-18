@@ -27,7 +27,7 @@ function toggleNav() {
           title: article.title,
           image: article.urlToImage,
           content: article.content,
-          time:article.time,
+          url: article.url 
         }));
         displayNews(news);
       })
@@ -56,8 +56,9 @@ function toggleNav() {
           <h2><b>${article.title}</b></h2>
           <br>
           <span>${article.content}</span>
-          <br><br><br><br><br>
-          <span class="time"> Breaking News. ${article.time}</span>
+          <br><br>
+          <span><a href="${article.url}" target="_blank">${article.url}</a></span>
+      </div>
         </div>
        </div>` 
       
@@ -78,17 +79,13 @@ function toggleNav() {
           <br>
           <span>${article.content}</span>
           <br><br>
-          <span class="time"> Breaking News. ${article.time}</span>
+          <span><a href="${article.url}" target="_blank">${article.url}</a></span>
+          </div>
         </div>
        ` 
   
   latestNews.appendChild(newsItem)
     });
-  
-  
-  
-  
-    
     news.slice(6,10).forEach(article => {
       const newsItem = document.createElement("div");
       newsItem.setAttribute('class','mustread')
@@ -102,20 +99,12 @@ function toggleNav() {
           <br>
           <span>${article.content}</span>
           <br><br>
-          <span class="time"> Breaking News. ${article.time}</span>
+          <span><a href="${article.url}" target="_blank">${article.url}</a></span>
+      </div>
         </div>
        ` 
   mustread.appendChild(newsItem)
     });
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
     news.slice(4,7).forEach(article => {
       const newsItem = document.createElement("div");
@@ -132,7 +121,8 @@ function toggleNav() {
           <br>
           <span>${article.content}</span>
           <br><br>
-          <span class="time"> Breaking News. ${article.time}</span>
+          <span><a href="${article.url}" target="_blank">${article.url}</a></span>
+          </div>
         </div>
        ` 
   
@@ -141,6 +131,4 @@ function toggleNav() {
   
     
   }
-  
-  
   window.onload = searchNews;

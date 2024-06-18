@@ -15,10 +15,17 @@ function toggleNav() {
 }
 
 
+
+
 // Fetch news using an API
 
 function searchNews() {
   const breakingnews = `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=1dda103097594899ab06482c72992bb3`;
+
+  // const apiKey = '1dda103097594899ab06482c72992bb3';
+  // const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=$1dda103097594899ab06482c72992bb3`;
+
+
 
   fetch(breakingnews)
     .then(response => response.json())
@@ -27,7 +34,7 @@ function searchNews() {
         title: article.title,
         image: article.urlToImage,
         content: article.content,
-        time:article.time,
+        url: article.url  
       }));
       displayNews(news);
     })
@@ -46,20 +53,20 @@ function displayNews(news) {
   news.slice(0,1).forEach(article => {
     const listItem = document.createElement("li");
     listItem.innerHTML = `
-    <div class= "newspage">
-
+    <div class="newspage">
       <div>
         <span><img src="${article.image}" ></span>
       </div>
-
-      <div class = "newscontent">
+      <div class="newscontent">
         <h2><b>${article.title}</b></h2>
         <br>
         <span>${article.content}</span>
-        <br><br><br><br><br>
-        <span class="time"> Breaking News. ${article.time}</span>
+        <br>
+        <br>
+        <span><a href="${article.url}" target="_blank">${article.url}</a></span>
       </div>
-     </div>` 
+    </div>`;
+    
     
     newsList.appendChild(listItem);
   });
@@ -77,17 +84,14 @@ function displayNews(news) {
         <h2><b>${article.title}</b></h2>
         <br>
         <span>${article.content}</span>
-        <br><br>
-        <span class="time"> Breaking News. ${article.time}</span>
+        <span><a href="${article.url}" target="_blank">${article.url}</a></span>
+      </div>
       </div>
      ` 
 
 latestNews.appendChild(newsItem)
   });
 
-
-
-  
   news.slice(6,10).forEach(article => {
     const newsItem = document.createElement("div");
     newsItem.setAttribute('class','mustread')
@@ -100,21 +104,12 @@ latestNews.appendChild(newsItem)
         <h2><b>${article.title}</b></h2>
         <br>
         <span>${article.content}</span>
-        <br><br>
-        <span class="time"> Breaking News. ${article.time}</span>
+        <span><a href="${article.url}" target="_blank">${article.url}</a></span>
+      </div>
       </div>
      ` 
 mustread.appendChild(newsItem)
   });
-
-
-
-
-
-
-
-
-
 
   news.slice(4,7).forEach(article => {
     const newsItem = document.createElement("div");
@@ -130,16 +125,23 @@ mustread.appendChild(newsItem)
         <h2><b>${article.title}</b></h2>
         <br>
         <span>${article.content}</span>
-        <br><br>
-        <span class="time"> Breaking News. ${article.time}</span>
+        <span><a href="${article.url}" target="_blank">${article.url}</a></span>
+      </div>
       </div>
      ` 
 
      recomendation.appendChild(newsItem)
   });
 
-  
+//   function search() {
+//     const query = document.getElementById('search').value;
+//     searchNews(query);
+//   }
+//  return search() 
+
+
 }
+
 
 
 window.onload = searchNews;

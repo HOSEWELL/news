@@ -43,9 +43,10 @@ body{
 }
 .newspage{
     display: flex;
-    display: 50% 50%;
+    display: 60% 40%;
     justify-content: space-between;
     column-gap: 60px;
+    margin: 0px 30px;
 }
 .newspage div span img{
     height: 25em;
@@ -69,6 +70,7 @@ body{
     font-weight: 800;
     justify-content: space-between;
     display: flex;
+    margin: 0px 30px;
 }
 .heading span{
     font-size: xx-large;
@@ -85,6 +87,7 @@ body{
  /* divtwopictures */
 #latest-news{
     display: flex;
+    padding: 5px;
     justify-content: space-between;
     overflow-x: scroll;
 }
@@ -94,13 +97,12 @@ body{
 #latest-news .newspage div img{
     height: 20em;
     width: 25em;
-    padding: 15px;
+    padding: 5px;
     border-radius: 30px;
     justify-content: space-between;
 }
 #latest-news .newspage{
     display: grid;
-    padding: 20px;
 }
 #bell:hover{
     transform: scale(2);
@@ -109,8 +111,11 @@ body{
 
 #mustread{
     display: flex;
-    padding: 20px;
-    overflow-x: scroll; 
+    padding: 10px;
+    margin: 0px 5px;
+    justify-content: space-between;
+    overflow-x: scroll;
+
 }
 #mustread::-webkit-scrollbar{
     width: 0;
@@ -127,6 +132,7 @@ body{
 #recomendation{
     display: flex;
     padding: 10px;
+    margin: 0px 5px;
     justify-content: space-between;
     overflow-x: scroll;
 }
@@ -231,6 +237,7 @@ body{
 }
 #latest-news div span img{
     height: 12em;
+    
     border-radius: 30px;
 
 }
