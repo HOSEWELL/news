@@ -22,8 +22,6 @@ function toggleNav() {
 function searchNews() {
   const breakingnews = `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=1dda103097594899ab06482c72992bb3`;
 
-  // const apiKey = '1dda103097594899ab06482c72992bb3';
-  // const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=$1dda103097594899ab06482c72992bb3`;
 
 
 
@@ -131,13 +129,7 @@ mustread.appendChild(newsItem)
      ` 
 
      recomendation.appendChild(newsItem)
-  });
-
-//   function search() {
-//     const query = document.getElementById('search').value;
-//     searchNews(query);
-//   }
-//  return search() 
+  }); 
 
 
 }
