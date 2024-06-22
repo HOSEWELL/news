@@ -18,15 +18,16 @@ function toggleNav() {
   // Fetch news using an API
   
   function searchNews() {
-    const breakingnews = `https://newsapi.org/v2/top-headlines?country=us&apiKey=1dda103097594899ab06482c72992bb3`;
+    const breakingnews = `https://api.currentsapi.services/v1/latest-news?apiKey=2TIRGcB2GZDlEjUVthEoLPcQakkKI4t7uCAdwWj8DJW9SKpA`;
   
     fetch(breakingnews)
       .then(response => response.json())
       .then(data => {
-        const news = data.articles.map(article => ({
+        console.log({'ola':data});
+        const news = data.news .map(article => ({
           title: article.title,
-          image: article.urlToImage,
-          content: article.content,
+          image: article.image,
+          description: article.description,
           url: article.url 
         }));
         displayNews(news);
@@ -43,7 +44,7 @@ function toggleNav() {
     newsList.innerHTML = '';
   
   
-    news.slice(0,1).forEach(article => {
+    news.slice(16,17).forEach(article => {
       const listItem = document.createElement("li");
       listItem.innerHTML = `
       <div class= "newspage">
@@ -55,7 +56,7 @@ function toggleNav() {
         <div class = "newscontent">
           <h2><b>${article.title}</b></h2>
           <br>
-          <span>${article.content}</span>
+          <span>${article.description}</span>
           <br><br>
           <span><a href="${article.url}" target="_blank">${article.url}</a></span>
       </div>
@@ -64,7 +65,7 @@ function toggleNav() {
       
       newsList.appendChild(listItem);
     });
-    news.slice(1,5).forEach(article => {
+    news.slice(9,13).forEach(article => {
       const newsItem = document.createElement("div");
       newsItem.setAttribute('class','newspage')
       newsItem.innerHTML = `
@@ -77,7 +78,7 @@ function toggleNav() {
         <div class = "newscontent">
           <h2><b>${article.title}</b></h2>
           <br>
-          <span>${article.content}</span>
+          <span>${article.description}</span>
           <br><br>
           <span><a href="${article.url}" target="_blank">${article.url}</a></span>
           </div>
@@ -86,7 +87,7 @@ function toggleNav() {
   
   latestNews.appendChild(newsItem)
     });
-    news.slice(6,10).forEach(article => {
+    news.slice(11,15).forEach(article => {
       const newsItem = document.createElement("div");
       newsItem.setAttribute('class','mustread')
       newsItem.innerHTML = `
@@ -97,7 +98,7 @@ function toggleNav() {
         <div class = "newscontent">
           <h2><b>${article.title}</b></h2>
           <br>
-          <span>${article.content}</span>
+          <span>${article.description}</span>
           <br><br>
           <span><a href="${article.url}" target="_blank">${article.url}</a></span>
       </div>
@@ -106,7 +107,7 @@ function toggleNav() {
   mustread.appendChild(newsItem)
     });
   
-    news.slice(4,7).forEach(article => {
+    news.slice(25,29).forEach(article => {
       const newsItem = document.createElement("div");
       newsItem.setAttribute('class','recomendation')
       newsItem.innerHTML = `
@@ -119,7 +120,7 @@ function toggleNav() {
         <div class = "newscontent">
           <h2><b>${article.title}</b></h2>
           <br>
-          <span>${article.content}</span>
+          <span>${article.description}</span>
           <br><br>
           <span><a href="${article.url}" target="_blank">${article.url}</a></span>
           </div>

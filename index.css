@@ -197,7 +197,7 @@ body{
         display: none;
     }
     .navlink.open {
-        display: grid;
+        display: flex;
     }
     .hambergermenu{
         display: block;
@@ -222,7 +222,7 @@ body{
   .newspage{
     display: grid;
     justify-content: space-between;
-    column-gap: 5px;
+    margin-left: 0;
     
 }
 .newspage div span img{
@@ -233,13 +233,19 @@ body{
 #latest-news{
     display: grid;
     justify-content: space-between;
-    padding: 0px 0px;
+    margin-left: 0;
+    padding: 0px;
 }
 #latest-news div span img{
-    height: 12em;
-    
-    border-radius: 30px;
+    height: 20em;
+    width: 20em;
+    border-radius: 20px;
+    padding: 10px;
+    align-items: center;
 
+}
+#latest-news .newcontent{
+    width: 100%;
 }
 .footer{
     display: grid;
@@ -257,8 +263,27 @@ body{
 }
 #mustread{
     display: grid;
+    justify-content: space-between;
+}
+#mustread div img{
+    height: 20em;
+    width: 20em;
+    border-radius: 20px;
+    padding: 10px;
+}
+#mustread .newscontent span{
+    justify-content: space-between;
+    width: 20em;
 }
 #recomendation{
     display: grid;
+    justify-content: space-between;
+}
+#recomendation img{
+    height: 20em;
+    width: 20em;
+    border-radius: 20px;
+    padding: 10px;
+    align-items: center;
 }
 }

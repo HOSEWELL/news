@@ -134,7 +134,14 @@ mustread.appendChild(newsItem)
 
 
 }
+document.getElementById('subscription-form').addEventListener('submit', function(event) {
+  event.preventDefault(); 
 
+  const email = document.getElementById('email').value;
+
+  alert(`Email received: ${email}`);
+
+});
 
 
 window.onload = searchNews;
