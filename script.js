@@ -1,3 +1,5 @@
+//home page js page
+
 function toggleNav() {
   let navLinks = document.querySelector('.navlink');
   navLinks.classList.toggle('open');
@@ -20,25 +22,22 @@ function toggleNav() {
 // Fetch news using an API
 
 function searchNews() {
-  const breakingnews = `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=1dda103097594899ab06482c72992bb3`;
+  const breakingnews = `https://api.currentsapi.services/v1/latest-news?apiKey=2TIRGcB2GZDlEjUVthEoLPcQakkKI4t7uCAdwWj8DJW9SKpA`;
 
 
-
-
-  fetch(breakingnews,{
-    mode:'no-cors'
-  })
+  fetch(breakingnews)
     .then(response => response.json())
     .then(data => {
-      const news = data.articles.map(article => ({
+      console.log({'ola':data});
+      const news = data.news.map(article => ({
         title: article.title,
-        image: article.urlToImage,
-        content: article.content,
+        image: article.image,
+        description: article.description,
         url: article.url  
       }));
       displayNews(news);
     })
-      
+
 }
 
 function displayNews(news) {
@@ -60,7 +59,7 @@ function displayNews(news) {
       <div class="newscontent">
         <h2><b>${article.title}</b></h2>
         <br>
-        <span>${article.content}</span>
+        <span>${article.description}</span>
         <br>
         <br>
         <span><a href="${article.url}" target="_blank">${article.url}</a></span>
@@ -83,7 +82,7 @@ function displayNews(news) {
       <div class = "newscontent">
         <h2><b>${article.title}</b></h2>
         <br>
-        <span>${article.content}</span>
+        <span>${article.description}</span>
         <span><a href="${article.url}" target="_blank">${article.url}</a></span>
       </div>
       </div>
@@ -103,7 +102,7 @@ latestNews.appendChild(newsItem)
       <div class = "newscontent">
         <h2><b>${article.title}</b></h2>
         <br>
-        <span>${article.content}</span>
+        <span>${article.description}</span>
         <span><a href="${article.url}" target="_blank">${article.url}</a></span>
       </div>
       </div>
@@ -124,7 +123,7 @@ mustread.appendChild(newsItem)
       <div class = "newscontent">
         <h2><b>${article.title}</b></h2>
         <br>
-        <span>${article.content}</span>
+        <span>${article.description}</span>
         <span><a href="${article.url}" target="_blank">${article.url}</a></span>
       </div>
       </div>
