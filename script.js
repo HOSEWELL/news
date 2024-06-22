@@ -25,7 +25,9 @@ function searchNews() {
 
 
 
-  fetch(breakingnews)
+  fetch(breakingnews,{
+    mode:'no-cors'
+  })
     .then(response => response.json())
     .then(data => {
       const news = data.articles.map(article => ({
